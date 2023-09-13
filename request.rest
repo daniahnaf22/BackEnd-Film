@@ -1,0 +1,150 @@
+GET http://localhost:5000/negara
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJEYW5pIEFobmFmIiwiZW1haWwiOiJkYW5pQGdtYWlsLmNvbSIsImlhdCI6MTY4ODM3MTkzMywiZXhwIjoxNjg4MzcxOTQ4fQ.mI0ViHYLjgaRpUEY1vYxkjZ7sqUgJlWok-_wPpuepXk
+
+###
+GET http://localhost:5000/negara/3
+
+###
+POST http://localhost:5000/negara
+Content-Type: application/json
+
+{
+    "namaNegara": "Singapore"
+}
+
+###
+PUT http://localhost:5000/negara/1
+Content-Type: application/json
+
+{
+    "namaNegara": "Eropa"
+}
+
+###
+DELETE http://localhost:5000/negara/1
+
+
+///Rumah Produksi
+###
+GET http://localhost:5000/rumahproduksi
+
+###
+GET http://localhost:5000/rumahproduksi/2
+
+###
+POST http://localhost:5000/rumahproduksi/
+Content-Type: application/json
+
+{
+    "namaRumahProduksi" : "DCU",
+    "tahunBerdiri" : 2010
+}
+
+###
+PUT http://localhost:5000/rumahproduksi/1
+Content-Type: application/json
+
+{
+    "namaRumahProduksi" : "Marvel",
+    "tahunBerdiri" : 1999
+}
+
+###
+DELETE http://localhost:5000/rumahproduksi/6
+
+//Artis
+###
+GET http://localhost:5000/artis/
+
+###
+GET http://localhost:5000/artis/:id
+
+###
+POST http://localhost:5000/artis/
+Content-Type: application/json
+
+{
+    "namaArtis" : "Sakura",
+    "tahunLahir" : 1999,
+    "kewarganegaraan" : 4
+}
+
+###
+PUT http://localhost:5000/artis/1
+Content-Type: application/json
+
+{
+    "namaArtis" : "Naruto U",
+    "tahunLahir" : 1999,
+    "kewarganegaraan" : 2
+}
+
+###
+DELETE http://localhost:5000/artis/3
+
+//Film
+###
+GET http://localhost:5000/film
+
+###
+GET http://localhost:5000/film/1
+
+###
+POST http://localhost:5000/film
+Content-Type: application/json
+
+{
+    "judulFilm" : "Oke",
+    "deskFilm" : "Petualangan laut",
+    "artisId" : 1,
+    "rumahProduksiId" : 1,
+    "tahun" : 2000,
+    "negaraId" : 1
+}
+
+###
+PUT http://localhost:5000/film/5
+Content-Type: application/json
+
+{
+    "judulFilm" : "Spiderman",
+    "deskFilm" : "Petualangan Bocah Laba-laba",
+    "artisId" : 1,
+    "rumahProduksiId" : 1,
+    "tahun" : 1999,
+    "negaraId" : 1
+}
+
+###
+DELETE http://localhost:5000/film/2
+
+///Users
+###
+GET http://localhost:5000/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJEYW5pIEFobmFmIiwiZW1haWwiOiJkYW5pQGdtYWlsLmNvbSIsImlhdCI6MTY4ODM3MTg2MiwiZXhwIjoxNjg4MzcxODc3fQ.nxrF0mpmACJcIgHg6ozvIyZFPvboTgldzxgJEUD2m8M
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+   "name": "mntapp",
+   "email": "ok@gmail.com",
+   "password": "123456",
+   "confPassword": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+   "email": "dani@gmail.com",
+   "password": "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
